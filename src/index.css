@@ -218,3 +218,51 @@ p {
   text-align: center;
   font-weight: 600;
 }
+/* --- Estilos para la página Sobre Mí --- */
+.perfil-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.avatar-placeholder {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  border: 2px dashed var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.perfil-texto {
+  flex: 1;
+  min-width: 260px;
+}
+
+.perfil-texto p {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+.seccion-info {
+  margin-bottom: 2rem;
+}
+
+.seccion-info h3 {
+  color: var(--primary-hover);
+  margin-bottom: 0.5rem;
+}
+
+.lista-intereses {
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}

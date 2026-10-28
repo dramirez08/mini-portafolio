@@ -1,32 +1,40 @@
 function SobreMi() {
-  const intereses = [
-    'Desarrollo Backend y diseño de APIs REST con FastAPI y Node.js',
-    'Desarrollo Frontend con React y Next.js',
-    'Arte digital 2D y modelado 3D de personajes en Blender'
-  ]
-
   return (
     <section className="sobre-mi">
       <h1>Sobre mí</h1>
-      
-      <p>
-        Actualmente soy estudiante de segundo semestre de <strong>Ingeniería Civil Informática</strong>. 
-        Me apasiona construir soluciones de software estructuradas, limpias y eficientes, combinando 
-        el rigor de la ingeniería con la creatividad del diseño.
-      </p>
 
-      <h2>¿Qué me interesa?</h2>
-      <ul>
-        {intereses.map((interes, index) => (
-          <li key={index}>{interes}</li>
-        ))}
-      </ul>
+      {/* Bloque superior: Avatar + Descripción */}
+      <div className="perfil-contenedor">
+        <div className="avatar-placeholder">
+          👤
+        </div>
 
-      <h2>Hacia dónde voy</h2>
-      <p>
-        Busco seguir fortaleciendo mis competencias en el desarrollo de software backend y arquitectura de sistemas,
-        participando en proyectos colaborativos de alto impacto e integrando tecnologías modernas para resolver problemas complejos.
-      </p>
+        <div className="perfil-texto">
+          <p>
+            Soy <strong>Danna</strong>, estudiante de <strong>Ingeniería Civil Informática</strong>. 
+            Me apasiona el desarrollo backend y me interesa crear soluciones tecnológicas 
+            eficientes que mejoren la experiencia de las personas.
+          </p>
+        </div>
+      </div>
+
+      {/* Subsección: ¿Qué estudio? */}
+      <div className="seccion-info">
+        <h3>¿Qué estudio?</h3>
+        <p>
+          Estudio Ingeniería Civil Informática.
+        </p>
+      </div>
+
+      {/* Subsección: ¿Qué me interesa? */}
+      <div className="seccion-info">
+        <h3>¿Qué me interesa?</h3>
+        <ul className="lista-intereses">
+          <li>Desarrollo web y tecnologías backend (FastAPI, Python, Node.js).</li>
+          <li>Aprender nuevas herramientas y arquitecturas de software.</li>
+          <li>Construir proyectos que generen un impacto real.</li>
+        </ul>
+      </div>
     </section>
   )
 }
