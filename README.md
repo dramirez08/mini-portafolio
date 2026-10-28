@@ -23,11 +23,12 @@ Portafolio web personal interactivo desarrollado con React, React Router y Vite,
 
     ```Bash
     npm run dev
-    
+
 4. Abre el enlace local proporcionado por Vite (habitualmente http://localhost:5173) en tu navegador.
 
 ## Estructura de Carpetas y Rutas
 
+    ```Bash
 mini-portafolio/
 ├── public/
 ├── src/
