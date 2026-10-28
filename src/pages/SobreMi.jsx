@@ -14,7 +14,7 @@ function SobreMi() {
         <div className="perfil-texto">
           <p>
             Soy <strong>Danna</strong>, estudiante de <strong>Ingeniería Civil Informática</strong>. 
-            Me apasiona el desarrollo backend y me interesa crear soluciones tecnológicas 
+            Me apasiona el desarrollo web y me interesa crear soluciones tecnológicas 
             eficientes que mejoren la experiencia de las personas.
           </p>
         </div>
@@ -24,7 +24,8 @@ function SobreMi() {
       <div className="seccion-info">
         <h3>¿Qué estudio?</h3>
         <p>
-          Estudio Ingeniería Civil Informática.
+          Estudio Ingeniería Civil Informática en el
+          instituto tecnológico de la Universidad Catolica de Temuco.
         </p>
       </div>
 
