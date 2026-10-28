@@ -29,30 +29,30 @@ Portafolio web personal interactivo desarrollado con React, React Router y Vite,
 ## Estructura de Carpetas y Rutas
 
     ```Bash
-mini-portafolio/
-├── public/
-├── src/
-│   ├── assets/
-│   │   └── foto-perfil.jpg
-│   ├── components/
-│   │   ├── Footer.jsx
-│   │   ├── FormularioContacto.jsx
-│   │   ├── Header.jsx
-│   │   ├── Layout.jsx
-│   │   └── TarjetaProyecto.jsx
-│   ├── pages/
-│   │   ├── Contacto.jsx
-│   │   ├── Habilidades.jsx
-│   │   ├── Inicio.jsx
-│   │   ├── Proyectos.jsx
-│   │   └── SobreMi.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── index.html
-├── package.json
-├── README.md
-└── uso_ia.md
+        mini-portafolio/
+        ├── public/
+        ├── src/
+        │   ├── assets/
+        │   │   └── foto-perfil.jpg
+        │   ├── components/
+        │   │   ├── Footer.jsx
+        │   │   ├── FormularioContacto.jsx
+        │   │   ├── Header.jsx
+        │   │   ├── Layout.jsx
+        │   │   └── TarjetaProyecto.jsx
+        │   ├── pages/
+        │   │   ├── Contacto.jsx
+        │   │   ├── Habilidades.jsx
+        │   │   ├── Inicio.jsx
+        │   │   ├── Proyectos.jsx
+        │   │   └── SobreMi.jsx
+        │   ├── App.jsx
+        │   ├── index.css
+        │   └── main.jsx
+        ├── index.html
+        ├── package.json
+        ├── README.md
+        └── uso_ia.md
 
 ## Rutas de la Aplicación
 - **/:** Muestra la vista de Inicio con el saludo principal y accesos rápidos a proyectos.
