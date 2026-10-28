@@ -1,17 +1,22 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/layout'
+import Inicio from './pages/Inicio'
+import SobreMi from './pages/SobreMi'
+import Habilidades from './pages/Habilidades'
+import Proyectos from './pages/Proyectos'
+import Contacto from './pages/Contactos'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline">
-          Portafolio
-        </h1>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Inicio />} />
+        <Route path="sobre-mi" element={<SobreMi />} />
+        <Route path="habilidades" element={<Habilidades />} />
+        <Route path="proyectos" element={<Proyectos />} />
+        <Route path="contacto" element={<Contacto />} />
+      </Route>
+    </Routes>
   )
 }
 
