@@ -1,40 +1,52 @@
 function Habilidades() {
-  const habilidades = [
-    { id: 1, nombre: 'Python / FastAPI', nivel: 'Intermedio' },
-    { id: 2, nombre: 'JavaScript / React / Node.js', nivel: 'Basico' },
-    { id: 3, nombre: 'Bases de Datos & SQL', nivel: 'Intermedio' },
-    { id: 4, nombre: 'HTML5 & CSS3', nivel: 'Basico' },
-    { id: 5, nombre: 'Redes de Computadores', nivel: 'Básico' }
+  const tecnologias = [
+    { nombre: 'HTML', nivel: '70%', icono: '🌐' },
+    { nombre: 'CSS', nivel: '85%', icono: '🎨' },
+    { nombre: 'JavaScript', nivel: '65%', icono: '⚡' },
+    { nombre: 'React', nivel: '50%', icono: '⚛️' },
+    { nombre: 'TypeScript', nivel: '60%', icono: '📘' },
+    { nombre: 'Python', nivel: '70%', icono: '🐍' },
   ]
 
-  const herramientas = [
-    'Visual Studio Code',
-    'Git & GitHub',
-    'PowerShell / Terminal',
-    'Postman & Thunder Client',
-    'Blender (Modelado 3D)',
-    'LaTeX & Overleaf'
-  ]
+  const herramientas = ['Git', 'GitHub', 'VS Code', 'Figma', 'Node.js', 'FastAPI', 'Postman']
 
   return (
     <section className="habilidades">
-      <h1>Habilidades Técnicas</h1>
+      <h1>Habilidades y Lenguajes</h1>
 
-      <div className="lista-habilidades">
-        {habilidades.map((hab) => (
-          <div key={hab.id} className="tarjeta-habilidad">
-            <h3>{hab.nombre}</h3>
-            <p><strong>Nivel:</strong> {hab.nivel}</p>
-          </div>
-        ))}
+      {/* Bloque 1: Tecnologías */}
+      <div className="seccion-habilidades">
+        <h2>Tecnologías</h2>
+        <div className="grid-tecnologias">
+          {tecnologias.map((tech) => (
+            <div key={tech.nombre} className="tarjeta-tech">
+              <div className="tech-header">
+                <span className="tech-icono">{tech.icono}</span>
+                <span className="tech-nombre">{tech.nombre}</span>
+              </div>
+              <div className="barra-contenedor">
+                <div 
+                  className="barra-progreso" 
+                  style={{ width: tech.nivel }}
+                ></div>
+              </div>
+              <span className="tech-porcentaje">{tech.nivel}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <h2>Herramientas y Tecnologías</h2>
-      <ul>
-        {herramientas.map((herramienta, index) => (
-          <li key={index}>{herramienta}</li>
-        ))}
-      </ul>
+      {/* Bloque 2: Herramientas */}
+      <div className="seccion-habilidades">
+        <h2>Herramientas</h2>
+        <div className="lista-herramientas">
+          {herramientas.map((herramienta) => (
+            <span key={herramienta} className="tag-herramienta">
+              {herramienta}
+            </span>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

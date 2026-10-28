@@ -4,7 +4,8 @@ function Contacto() {
   return (
     <section className="contacto-container">
       <h1>Contacto</h1>
-      <p>¿Tienes alguna duda o quieres colaborar en algún proyecto? Envíame un mensaje:</p>
+      <p>¿Tienes alguna duda o propuesta?
+       ¡Me encantaria saber sobre ti!</p>
       
       <FormularioContacto />
     </section>

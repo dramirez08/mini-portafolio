@@ -123,46 +123,6 @@ p {
   transform: translateY(-2px);
 }
 
-/* --- Tarjetas (Habilidades y Proyectos) --- */
-.lista-habilidades, .grid-proyectos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.tarjeta-habilidad, .tarjeta-proyecto {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.tarjeta-habilidad:hover, .tarjeta-proyecto:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary-color);
-}
-
-.tarjeta-proyecto a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-
-.tarjeta-proyecto a:hover {
-  text-decoration: underline;
-}
-
-.sin-repositorio {
-  color: #7b6f96;
-  font-style: italic;
-  font-size: 0.9rem;
-}
-
 /* --- Formulario y Errores --- */
 .contenedor-formulario {
   background-color: var(--card-bg);
@@ -265,4 +225,162 @@ p {
   padding-left: 1.5rem;
   color: var(--text-muted);
   line-height: 1.8;
+}
+
+/* --- Estilos de Habilidades --- */
+.seccion-habilidades {
+  margin-top: 2rem;
+}
+
+.seccion-habilidades h2 {
+  font-size: 1.3rem;
+  color: var(--primary-hover);
+  margin-bottom: 1rem;
+}
+
+/* Grilla de Tarjetas de Tecnologías */
+.grid-tecnologias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+}
+
+.tarjeta-tech {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-tech:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+}
+
+.tech-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tech-icono {
+  font-size: 2rem;
+}
+
+.tech-nombre {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Barra de progreso */
+.barra-contenedor {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barra-progreso {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+.tech-porcentaje {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  align-self: flex-end;
+}
+
+/* Tags de Herramientas */
+.lista-herramientas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tag-herramienta {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.tag-herramienta:hover {
+  background-color: rgba(157, 78, 221, 0.2);
+  border-color: var(--primary-color);
+}
+
+/* --- Estilos de Proyectos --- */
+.grid-proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta-proyecto {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  flex-wrap: wrap;
+}
+
+.tarjeta-proyecto:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+}
+
+.proyecto-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background-color: var(--bg-color);
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.proyecto-info {
+  flex: 1;
+  min-width: 240px;
+}
+
+.proyecto-info h3 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.proyecto-info a {
+  color: var(--primary-hover);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.6rem;
+}
+
+.proyecto-info a:hover {
+  text-decoration: underline;
 }
