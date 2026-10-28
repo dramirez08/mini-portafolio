@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import fotoPerfil from '../assets/foto-perfil.jpg'
 
 function Inicio() {
   return (
@@ -32,7 +33,7 @@ function Inicio() {
           justifyContent: 'center',
           color: 'var(--text-muted)'
         }}>
-          <img src="assets/foto-perfil.jpg" alt="Foto de perfil" style={{ maxWidth: '100%', maxHeight: '100%' }} />
+          <img src={fotoPerfil} alt="Foto de perfil" style={{ maxWidth: '100%', maxHeight: '100%' }} />
         </div>
       </div>
 

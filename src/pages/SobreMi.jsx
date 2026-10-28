@@ -1,3 +1,5 @@
+import fotoPerfil from '../assets/foto-perfil.jpg'
+
 function SobreMi() {
   return (
     <section className="sobre-mi">
@@ -6,7 +8,7 @@ function SobreMi() {
       {/* Bloque superior: Avatar + Descripción */}
       <div className="perfil-contenedor">
         <div className="avatar-placeholder">
-          👤
+          <img src={fotoPerfil} alt="Foto de perfil" className="avatar-img" style={{ maxWidth: '100%', maxHeight: '100%' }} />
         </div>
 
         <div className="perfil-texto">

@@ -1,8 +1,15 @@
-function TarjetaProyecto({ titulo, descripcion, enlace }) {
+import fotoPerfil from '../assets/foto-perfil.jpg'
+
+function TarjetaProyecto({ titulo, descripcion, enlace, imagen }) {
   return (
     <div className="tarjeta-proyecto">
-      <div className="proyecto-img-placeholder">
-        <span>🖼️ [Imagen del proyecto]</span>
+      <div className="proyecto-img-contenedor">
+        {/* Usamos la imagen que viene por props, o la imagen por defecto */}
+        <img 
+          src={imagen || fotoPerfil} 
+          alt={titulo} 
+          className="proyecto-img"
+        />
       </div>
       <div className="proyecto-info">
         <h3>{titulo}</h3>

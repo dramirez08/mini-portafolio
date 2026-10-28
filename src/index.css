@@ -384,3 +384,20 @@ p {
 .proyecto-info a:hover {
   text-decoration: underline;
 }
+
+.proyecto-img-contenedor {
+  width: 160px;
+  height: 110px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.proyecto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  display: block;
+}
