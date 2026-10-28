@@ -1,0 +1,220 @@
+/* --- 1. Variables de diseño y colores morado oscuro --- */
+:root {
+  --bg-color: #0f0b1a;          /* Fondo general muy oscuro */
+  --card-bg: #1a1429;           /* Fondo de tarjetas y contenedores */
+  --text-main: #f3f0ff;         /* Texto principal claro */
+  --text-muted: #b8b2d1;        /* Texto secundario */
+  --primary-color: #9d4edd;     /* Morado principal vibrante */
+  --primary-hover: #c77dff;     /* Morado claro para hovers */
+  --accent-color: #e0aaff;      /* Acento pastel */
+  --error-color: #e02358;       /* Rojo/rosa para errores */
+  --success-color: #fccf07;     /* Verde para éxito */
+  --border-color: #3c2a59;      /* Bordes sutiles */
+}
+
+/* --- 2. Estructura general (Footer siempre abajo) --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* --- 3. Header y Menú de Navegación --- */
+header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--text-main);
+  background-color: rgba(157, 78, 221, 0.15);
+}
+
+/* Estado activo del NavLink proporcionado por React Router */
+header nav a.active {
+  color: var(--text-main);
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* --- Títulos generales --- */
+h1, h2, h3 {
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* --- Botones y Enlaces internos --- */
+.btn-explorar, .btn-enviar {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-explorar:hover, .btn-enviar:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --- Tarjetas (Habilidades y Proyectos) --- */
+.lista-habilidades, .grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta-habilidad, .tarjeta-proyecto {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta-habilidad:hover, .tarjeta-proyecto:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+}
+
+.tarjeta-proyecto a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.tarjeta-proyecto a:hover {
+  text-decoration: underline;
+}
+
+.sin-repositorio {
+  color: #7b6f96;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* --- Formulario y Errores --- */
+.contenedor-formulario {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.campo-form {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-form label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.campo-form input,
+.campo-form textarea {
+  background-color: #120d20;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.75rem;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(157, 78, 221, 0.4);
+}
+
+.error-texto {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.mensaje-exito {
+  background-color: rgba(114, 22, 122, 0.15);
+  border: 1px solid var(--success-color);
+  color: #f6f878;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
